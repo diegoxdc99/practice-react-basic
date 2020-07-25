@@ -3,6 +3,7 @@ import Paper from '@material-ui/core/Paper';
 import './styles.scss';
 import getStatsCountry from '../../services/Coronavirus';
 import Container from '@material-ui/core/Container';
+import Cards from '../../components/cards';
 
 export default class Coronavirus extends Component {
     constructor(props) {
@@ -19,19 +20,7 @@ export default class Coronavirus extends Component {
     render() {
         return (
             <Container maxWidth="lg">
-            <div className="container">
-                {this.state.countries.map((country => {
-                    return (
-                        <Paper className="card" elevation={1}>
-                            <div className="card-title">{country.Country}</div>
-                            <div className="card-subtitle"><b>Nuevos:</b> {country.NewConfirmed}</div>
-                            <div className="card-subtitle"><b>Total:</b> {country.TotalRecovered}</div>
-                        </Paper>
-                    )
-                }))}
-
-
-            </div>
+                <Cards countries={this.state.countries}/>
             </Container>
         )
     }
