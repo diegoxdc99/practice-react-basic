@@ -9,7 +9,6 @@ export default class Card extends Component {
   render() {
     const { Country, NewConfirmed, TotalRecovered, key } = this.props.country;
     return (
-      // <div className={`${styles.card}, ${styles["card--translate"]}`}>
       <Paper className={styles.card} elevation={1}>
         <div className={styles['card-title']}>{Country}</div>
         <div className={styles['card-subtitle']}>
