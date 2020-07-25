@@ -7,6 +7,7 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Coronavirus from '../../pages/Coronavirus';
+import './styles.scss';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -57,14 +58,17 @@ export default function MenuHeader() {
   };
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static">
+    <div>
+      <AppBar position="static" >
+      <div className="navbarrrrrrrrrrrrrrr">
         <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
           <Tab label="Coronavairus" {...a11yProps(0)} />
           <Tab label="Item Two" {...a11yProps(1)} />
           <Tab label="Item Three" {...a11yProps(2)} />
         </Tabs>
+        </div>
       </AppBar>
+
       <TabPanel value={value} index={0}>
         <Coronavirus />
       </TabPanel>
