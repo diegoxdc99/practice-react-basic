@@ -10,7 +10,7 @@
 
 .fade-enter.fade-enter-active {
   opacity: 1;
-  transition: opacity 100ms ease-in;
+  transition: opacity 500ms ease-in;
 }
 
 .fade-leave {
@@ -19,15 +19,4 @@
 
 .fade-leave.fade-leave-active {
   opacity: 0.01;
-  transition:  opacity 1ms ease-in;
-}
-
-.fade-appear {
-  opacity: 0.01;
-  transform: translate(-115px, 0);
-}
-
-.fade-appear.fade-appear-active {
-  opacity: 1;
-  transition: opacity 100ms ease-in;
 }
