@@ -26,7 +26,7 @@ export default class Camera extends Component {
 
   startVideo = async () => {
     try {
-      const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+      const stream = await navigator.mediaDevices.getUserMedia({ video: {} });
       this.videoRef.current.srcObject = stream;
       this.setState({ videoStream: stream });
     } catch (err) {
@@ -96,8 +96,8 @@ export default class Camera extends Component {
           id='video'
           ref={this.videoRef}
           className={styles.video}
-          width={480}
-          height={640}
+          width={225}
+          height={300}
           autoPlay
           muted
         ></video>
