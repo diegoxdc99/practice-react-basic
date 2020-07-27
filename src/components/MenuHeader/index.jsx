@@ -13,17 +13,13 @@ function TabPanel(props) {
 
   return (
     <div
-      role="tabpanel"
+      role='tabpanel'
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
-      {value === index && (
-        <Box p={3}>
-          {children}
-        </Box>
-      )}
+      {value === index && <Box p={3}>{children}</Box>}
     </div>
   );
 }
@@ -50,13 +46,17 @@ export default function MenuHeader() {
 
   return (
     <div>
-      <AppBar position="static" >
-      <div className="navbarrrrrrrrrrrrrrr">
-        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
-          <Tab label="Coronavairus" {...a11yProps(0)} />
-          <Tab label="FaceApp" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
-        </Tabs>
+      <AppBar position='static'>
+        <div className='navbarrrrrrrrrrrrrrr'>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            aria-label='simple tabs example'
+          >
+            <Tab label='Coronavairus' {...a11yProps(0)} />
+            <Tab label='FaceApp' {...a11yProps(1)} />
+            <Tab label='Item Three' {...a11yProps(2)} />
+          </Tabs>
         </div>
       </AppBar>
 
@@ -64,7 +64,7 @@ export default function MenuHeader() {
         <Coronavirus />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <FaceRecognition/>
+        <FaceRecognition />
       </TabPanel>
       <TabPanel value={value} index={2}>
         Item Three
