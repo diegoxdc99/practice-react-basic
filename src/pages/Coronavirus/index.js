@@ -37,6 +37,7 @@ export default class Coronavirus extends Component {
     }
     render() {
         return (
+
             <Container maxWidth="lg">
                 <div className={"search"} >
                     <TextField label="Buscar país" onChange={this.handleChange} />

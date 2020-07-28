@@ -1,0 +1,9 @@
+.container {
+    margin-top: 20px;
+
+    .card {
+        padding: 15px;
+        display: grid;
+        grid-template-columns: 200px 300px;
+    }
+}
