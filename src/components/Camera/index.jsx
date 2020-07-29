@@ -7,6 +7,7 @@ export default class Camera extends Component {
   videoRef = React.createRef();
   containerRef = React.createRef();
   predictedAges = [];
+  interval;
 
   constructor(props) {
     super(props);
@@ -42,16 +43,20 @@ export default class Camera extends Component {
     return avgPredictedAge;
   };
 
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
   registerStartEvent = () => {
     this.videoRef.current.addEventListener('playing', () => {
       const video = this.videoRef.current;
       const canvas = faceapi.createCanvasFromMedia(video);
       this.containerRef.current.append(canvas);
       //   document.body.append(canvas);
-      const displaySize = { width: video.width, height: video.height };
+      const displaySize = { width: video.offsetWidth, height: video.offsetHeight };
       faceapi.matchDimensions(canvas, displaySize);
 
-      setInterval(async () => {
+      this.interval = setInterval(async () => {
         const detections = await faceapi
           .detectAllFaces(video, new faceapi.TinyFaceDetectorOptions())
           .withFaceLandmarks()
@@ -91,13 +96,13 @@ export default class Camera extends Component {
   }
   render() {
     return (
+
       <div ref={this.containerRef} className={styles.container}>
+        Esto va a reconocer el estado del animo y cuantos años tienes (bueno esa es la idea)
         <video
           id='video'
           ref={this.videoRef}
           className={styles.video}
-          width={225}
-          height={300}
           autoPlay
           muted
         ></video>

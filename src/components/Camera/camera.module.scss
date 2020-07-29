@@ -2,13 +2,19 @@
     position: absolute;
     margin: 0;
     padding: 0;
+    top: 20px;
+    width: 50%;
 }
 
 canvas {
     position: absolute;
+    top: 20px;
     z-index: 5;
 }
 
 .container {
-
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }

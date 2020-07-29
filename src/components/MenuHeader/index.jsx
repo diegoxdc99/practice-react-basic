@@ -16,9 +16,9 @@ export default function MenuHeader() {
   };
 
   return (
-    <div>
+    <div className="overflow--hiden">
       <AppBar position='static'>
-        <div className='navbarrrrrrrrrrrrrrr'>
+        <div className='navbar'>
           <Tabs
             value={value}
             onChange={handleChange}

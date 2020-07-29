@@ -6,8 +6,10 @@ const getStatsCountry = async () => {
   return data.data.Countries;
 };
 
-
 // const getStatsCountry = async () => {
-//     return countries;
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => resolve(countries), 4000)
+//   })
 // };
+
 export default getStatsCountry;

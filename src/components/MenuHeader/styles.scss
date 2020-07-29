@@ -1,5 +1,5 @@
 @import "./rgb.scss";
-.navbarrrrrrrrrrrrrrr {
+.navbar {
     z-index: 2;
     @include rgb(linear-gradient(
         45deg,
@@ -15,4 +15,8 @@
       ), 0%) {
         position: relative;
       }
+}
+
+.overflow--hiden {
+  overflow: hidden;
 }
