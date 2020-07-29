@@ -98,7 +98,7 @@ export default class Camera extends Component {
     return (
 
       <div ref={this.containerRef} className={styles.container}>
-        Esto va a reconocer el estado del animo y cuantos años tienes (bueno esa es la idea)
+        Esto va a reconocer el estado del animo y cuantos años tienes, por favor espere (bueno esa es la idea)
         <video
           id='video'
           ref={this.videoRef}
